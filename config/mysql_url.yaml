@@ -1,0 +1,9 @@
+mysql_localhost:
+  url: localhost\wdkl_member
+  username: root
+  password: 123456
+
+mysql_39:
+  url: 39.108.248.223\wdkl_member
+  username: root
+  password: qwe123
