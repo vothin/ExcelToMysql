@@ -8,31 +8,9 @@
 import pymysql
 from common.record_log import logs
 from common.read_config import ReadConfig
+from base.base import Base
 
-class LinkMysql():
-
-    def __init__(self, sec_name):
-        self.conf = self.getConfig(sec_name)
-
-        self.connect = pymysql.Connect(
-            host = self.conf['url'],
-            port = self.conf['port'],
-            user = str(self.conf['username']),
-            passwd = str(self.conf['password']),
-            db = self.conf['db'],
-            charset = 'utf8'
-        )
-
-        self.cursor = self.connect.cursor()
-        logs.info('链接数据库成功')
-
-    # 获得配置文件的数据
-    def getConfig(self, sec_name):
-        r = ReadConfig()
-        readConfig = r.getValue(sec_name)
-
-        return readConfig
-
+class LinkMysql(Base):
 
     # 查询数据
     def insertData(self, name, value):
