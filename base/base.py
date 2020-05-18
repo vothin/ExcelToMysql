@@ -7,13 +7,14 @@
 
 
 import pymysql
-from common.record_log import logs
 from common.read_config import ReadConfig
+from common.record_log import logs
 
 class Base():
 
     def __init__(self, sec_name):
-        self.conf = self.getConfig(sec_name)
+        r = ReadConfig()
+        self.conf = r.getValue(sec_name)
 
         self.connect = pymysql.Connect(
             host = self.conf['url'],
@@ -25,12 +26,6 @@ class Base():
         )
 
         self.cursor = self.connect.cursor()
-        logs.info('链接数据库成功')
+        logs.info('成功连接数据库')
 
-    # 获得配置文件的数据
-    def getConfig(self, sec_name):
-        r = ReadConfig()
-        readConfig = r.getValue(sec_name)
-
-        return readConfig
 
