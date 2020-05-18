@@ -5,6 +5,7 @@
 
 # ****************************************************************
 
+import time
 from common.record_log import logs
 from base.base import Base
 
@@ -13,10 +14,12 @@ class DML_Mysql(Base):
     # 查询数据
     def insertData(self, name, value):
         sql = 'insert into care_carolie_item ' \
-              '(name, carolie, unit_qty, unit) ' \
-              'values("%s", 90, %s, "克")'
+              '(create_time, name, carolie, unit_qty, unit) ' \
+              'values(%s, "%s", 90, %s, "克")'
 
-        self.cursor.execute(sql % (name, value))
+        now_time = int(time.time())
+
+        self.cursor.execute(sql % (now_time, name, value))
         self.connect.commit()
 
 
