@@ -16,7 +16,11 @@ class LinkMysql():
 
         connect = pymysql.Connect(
             host = self.conf['url'],
-            port = 3306
+            port = self.conf['port'],
+            user = self.conf['username'],
+            passwd = self.conf['password'],
+            db = 'wdkl_member',
+
         )
 
     # 获得配置文件的数据

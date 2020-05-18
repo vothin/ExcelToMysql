@@ -3,9 +3,11 @@ mysql_localhost:
   username: root
   password: 123456
   port: 3306
+  db: test
 
 mysql_39:
   url: 39.108.248.223\wdkl_member
   username: root
   password: qwe123
   port: 3306
+  db: wdkl_member
