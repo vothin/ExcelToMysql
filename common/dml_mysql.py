@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2020/5/18 11:40
 # @Author  : vothin
-# @File    : link_mysql.py
+# @File    : dml_mysql.py
 
 # ****************************************************************
 
-import pymysql
 from common.record_log import logs
-from common.read_config import ReadConfig
 from base.base import Base
 
-class LinkMysql(Base):
+class DML_Mysql(Base):
 
     # 查询数据
     def insertData(self, name, value):
@@ -43,9 +41,9 @@ class LinkMysql(Base):
 
 
 if __name__ == '__main__':
-    l = LinkMysql('mysql_localhost')
-    # l.insertData('1', 2)
-    l.deleteData()
+    l = DML_Mysql('mysql_localhost')
+    l.insertData('1', 2)
+    # l.deleteData()
 
 
 
