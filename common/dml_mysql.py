@@ -14,15 +14,10 @@ class DML_Mysql(Base):
     def insertData(self, name, value):
         sql = 'insert into care_carolie_item ' \
               '(name, carolie, unit_qty, unit) ' \
-              'values(%s, 90, %s, "克")'
+              'values("%s", 90, %s, "克")'
 
         self.cursor.execute(sql % (name, value))
         self.connect.commit()
-        logs.info("成功插入数据")
-
-        self.cursor.close()
-        self.connect.close()
-        logs.info('关闭数据库')
 
 
     # 修改数据
@@ -34,9 +29,7 @@ class DML_Mysql(Base):
         self.connect.commit()
         logs.info('成功删除数据')
 
-        self.cursor.close()
-        self.connect.close()
-        logs.info('关闭数据库')
+
 
 
 
