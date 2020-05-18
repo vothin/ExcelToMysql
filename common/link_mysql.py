@@ -19,9 +19,12 @@ class LinkMysql():
             port = self.conf['port'],
             user = self.conf['username'],
             passwd = self.conf['password'],
-            db = 'wdkl_member',
-
+            db = self.conf['db'],
+            charset = 'utf8'
         )
+
+        cursor = connect.cursor()
+        logs.info(cursor)
 
     # 获得配置文件的数据
     def getConfig(self, sec_name):
@@ -36,6 +39,6 @@ class LinkMysql():
 
 if __name__ == '__main__':
     l = LinkMysql('mysql_localhost')
-    print(l)
+
 
 
