@@ -1,3 +1,13 @@
 [32m 2020-05-15 17:01:53,585 record_log.py[line:56)] INFO: english[0m
 [32m 2020-05-15 17:02:03,390 record_log.py[line:56)] INFO: 中文[0m
 [31m 2020-05-18 10:37:39,541 read_config.py[line:33)] ERROR: 0[0m
+[32m 2020-05-18 11:57:10,291 link_mysql.py[line:27)] INFO: <pymysql.cursors.Cursor object at 0x0000018C348C64C0>[0m
+[32m 2020-05-18 11:57:42,394 link_mysql.py[line:27)] INFO: 链接数据库成功[0m
+[32m 2020-05-18 11:57:49,859 link_mysql.py[line:27)] INFO: 链接数据库成功[0m
+[32m 2020-05-18 14:20:34,025 link_mysql.py[line:27)] INFO: 链接数据库成功[0m
+[32m 2020-05-18 14:20:55,326 link_mysql.py[line:27)] INFO: 链接数据库成功[0m
+[32m 2020-05-18 14:21:22,763 link_mysql.py[line:27)] INFO: 链接数据库成功[0m
+[32m 2020-05-18 14:21:45,631 link_mysql.py[line:27)] INFO: 链接数据库成功[0m
+[32m 2020-05-18 14:30:29,081 link_mysql.py[line:27)] INFO: 链接数据库成功[0m
+[32m 2020-05-18 14:30:37,194 link_mysql.py[line:27)] INFO: 链接数据库成功[0m
+[32m 2020-05-18 14:36:27,886 link_mysql.py[line:27)] INFO: 链接数据库成功[0m
