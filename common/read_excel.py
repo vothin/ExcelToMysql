@@ -41,7 +41,6 @@ class ReadExcel():
 
 
 
-
 if __name__ == '__main__':
     r = ReadExcel('Sheet1')
     print(r.data)
