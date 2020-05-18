@@ -30,16 +30,22 @@ class DML_Mysql(Base):
 
         self.cursor.execute(sql)
         self.connect.commit()
-        logs.info('成功删除数据')
+        logs.info('成功删除%s数据' % self.cursor.rowcount)
 
 
+    # 查询语句
+    def selectData(self):
+        sql = 'select * from care_carolie_item'
 
+        self.cursor.execute(sql)
+        for i in self.cursor.fetchall():
+            print(i)
+        logs.info('成功查询%s数据' % self.cursor.rowcount)
 
 
 if __name__ == '__main__':
-    l = DML_Mysql('mysql_localhost')
-    l.insertData('1', 2)
-    # l.deleteData()
+    l = DML_Mysql('mysql_39')
+    l.selectData()
 
 
 
